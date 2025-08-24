@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'northwind',
+        'NAME': 'modulo_reventa',
         'USER': 'root',
         'PASSWORD': '12345',
         'HOST': 'localhost',

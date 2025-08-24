@@ -1,22 +1,26 @@
 from rest_framework import serializers
-from .models import Customers, Products, Orders, Orderdetails
+from .models import InventarioRevendedor, Lotes, PedidosRevendedor, Usuarios, VentasRevendedor
 
-class CustomersSerializer(serializers.ModelSerializer):
+class InventarioRevendedorSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Customers
+        model = InventarioRevendedor
         fields = '__all__'
 
-class ProductsSerializer(serializers.ModelSerializer):
+class LotesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Products
+        model = Lotes
         fields = '__all__'
 
-class OrdersSerializer(serializers.ModelSerializer):
+class PedidosRevendedorSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Orders
+        model = PedidosRevendedor
         fields = '__all__'
 
-class OrderdetailsSerializer(serializers.ModelSerializer):
+class UsuariosSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Orderdetails
+        model = Usuarios
+        fields = '__all__'
+class VentasRevendedorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = VentasRevendedor
         fields = '__all__'

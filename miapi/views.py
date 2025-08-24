@@ -1,19 +1,23 @@
 from rest_framework import viewsets
-from .models import Customers, Products, Orders, Orderdetails
-from .serializers import CustomersSerializer, ProductsSerializer, OrdersSerializer, OrderdetailsSerializer
+from .models import InventarioRevendedor, Lotes, PedidosRevendedor, Usuarios, VentasRevendedor
+from .serializers import InventarioRevendedorSerializer, LotesSerializer, PedidosRevendedorSerializer, UsuariosSerializer, VentasRevendedorSerializer
 
-class CustomersViewSet(viewsets.ModelViewSet):
-    queryset = Customers.objects.all()
-    serializer_class = CustomersSerializer
+class InventarioRevendedorViewSet(viewsets.ModelViewSet):
+    queryset = InventarioRevendedor.objects.all()
+    serializer_class = InventarioRevendedorSerializer
 
-class ProductsViewSet(viewsets.ModelViewSet):
-    queryset = Products.objects.all()
-    serializer_class = ProductsSerializer
+class LotesViewSet(viewsets.ModelViewSet):
+    queryset = Lotes.objects.all()
+    serializer_class = LotesSerializer
 
-class OrdersViewSet(viewsets.ModelViewSet):
-    queryset = Orders.objects.all()
-    serializer_class = OrdersSerializer
+class PedidosRevendedorViewSet(viewsets.ModelViewSet):
+    queryset = PedidosRevendedor.objects.all()
+    serializer_class = PedidosRevendedorSerializer
 
-class OrderdetailsViewSet(viewsets.ModelViewSet):
-    queryset = Orderdetails.objects.all()
-    serializer_class = OrderdetailsSerializer
+class UsuariosViewSet(viewsets.ModelViewSet):
+    queryset = Usuarios.objects.all()
+    serializer_class = UsuariosSerializer
+
+class VentasRevendedorViewSet(viewsets.ModelViewSet):
+    queryset = VentasRevendedor.objects.all()
+    serializer_class = VentasRevendedorSerializer
